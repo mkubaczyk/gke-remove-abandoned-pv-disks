@@ -1,7 +1,3 @@
-
-
-python3 main.py --project-id egnyte-us-gce-gcs-project --disk-regex "gke-connect-am2-0.*pvc.*" --kube-context am2 --replica-zones="europe-west1-b europe-west1-d" --region europe-west1 --remove --dry-run
-
 # GKE Remove abandoned PV disks
 
 This script aim is to find Google Compute disks with names matching the regex that were
