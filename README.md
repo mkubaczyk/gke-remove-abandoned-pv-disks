@@ -13,6 +13,9 @@ python3 main.py <parameters>
 where parameters are:
 
 ```
+--kube-config
+Kube config file location
+
 --remove
 Invokes gcloud delete commands based on findings
 

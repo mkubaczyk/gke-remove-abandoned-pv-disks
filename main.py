@@ -9,6 +9,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--project-id', type=str, required=True)
 parser.add_argument('--disk-regex', type=str, required=True)
 parser.add_argument('--kube-context', type=str, required=True)
+parser.add_argument('--kube-config', type=str, required=True)
 parser.add_argument('--remove', action='store_true')
 parser.add_argument('--dry-run', action='store_true')
 parser.add_argument('--region', type=str)
@@ -16,7 +17,7 @@ parser.add_argument('--zone', type=str)
 parser.add_argument('--replica-zones', type=str)
 args = parser.parse_args()
 
-config.load_kube_config(config_file='/Users/mkubaczyk/.kube/config', context=args.kube_context)
+config.load_kube_config(config_file=args.kube_config', context=args.kube_context)
 
 if args.replica_zones and not args.region:
     print('--region is required when --replica-zones is defined')
